@@ -1,0 +1,105 @@
+.create_acount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 82px);
+  form {
+    box-shadow: 0 0 5px #c3bfbf;
+    border-radius: 5px;
+    padding: 20px;
+    width: 600px;
+    h2{
+      text-align: center;
+      color: var(--main_color);
+      font-weight: normal;
+    }
+    input {
+      border: 1px solid var(--border_color);
+      padding: 10px 5px;
+      outline: none;
+      font-size: 17px;
+      border-radius: 5px;
+      margin: 10px 0;
+      display: block;
+      width: 100%;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input {
+        width: 49%;
+        gap: 10px;
+      }
+    }
+    .remember {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      input {
+        width: 20px;
+        height: 20px;
+      }
+      label {
+        color: var(--main_color);
+        font-size: 20px;
+        font-weight: normal;
+      }
+    }
+    .btn {
+      width: 100%;
+      text-align: center;
+      margin: 20px 0;
+    }
+    p {
+      text-align: center;
+      color: var(--p_color);
+      font-size: 18px;
+      a {
+        color: var(--main_color);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .create_acount {
+    form {
+      width: 400px;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .create_acount {
+    form {
+      width: 300px;
+      input {
+        margin: 5px 0;
+        font-size: 15px;
+      }
+      .name {
+        flex-direction: column;
+        input {
+          width: 100%;
+        }
+      }
+      .btn {
+        font-weight: normal;
+        margin: 10px 0;
+      }
+      .remember{
+        input{
+          width: 15px;
+          height: 15px;
+        }
+        label{
+          font-size: 15px;
+        }
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Nav from './components/navbar/Nav'
+import ContextProvider from './components/context/GlobalContext'
+import HomePage from './components/homePage/HomePage'
+import Cart from './components/cart/Cart'
+import FavBook from './components/favBook/FavBook'
+import BookApi from './components/BookApi/BookApi'
+import CreateAcount from './components/register/CreateAcount'
+import Register from './components/register/Register'
+import Forget from './components/register/ForgetPass'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <ContextProvider>
+    <div className='app'>
+     <Nav />
+     <BookApi />
+     <Routes>
+     <Route path='/'  element ={ <HomePage /> }/>
+     <Route path='/cart'  element ={ <Cart /> }/>
+     <Route path='/fav'  element ={ <FavBook /> }/>
+     <Route path='/create-acount'  element ={ <CreateAcount /> }/>
+     <Route path='/register'  element ={ <Register /> }/>
+     <Route path='/forget'  element ={ <Forget /> }/>
+     </Routes>
     </div>
-  );
+    </ContextProvider>
+    </Router>
+  )
 }
 
-export default App;
+export default App

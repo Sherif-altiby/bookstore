@@ -1,0 +1,152 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  box-shadow: 0 0 5px #999;
+  .logo {
+    i {
+      font-size: 25px;
+    }
+    span {
+      font-size: 25px;
+      margin-left: 0;
+      font-weight: 500;
+      color: var(--dark);
+    }
+  }
+  .search {
+    width: 500px;
+    border: 1px solid #d2cfcf;
+    border-radius: 3px;
+    padding: 5px;
+    transition: 0.4s;
+    input {
+      border: none;
+      outline: none;
+      font-size: 15px;
+      font-weight: 600;
+      width: 90%;
+      padding: 5px;
+      padding-top: 7px;
+    }
+    i {
+      font-size: 23px;
+      margin-left: 10px;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    i {
+      transition: .3s;
+      font-size: 23px;
+      cursor: pointer;
+      &:hover{
+        color: var(--dark);
+      }
+      &.hide {
+        display: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.menu_nav {
+  background-color: var(--main_color);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      transition: .4s;
+      padding: 15px;
+      &:hover{
+        background-color: var(--hover_color);
+      }
+      a {
+        color: var(--light);
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.bottom_nav {
+  background-color: var(--main_color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: sticky;
+  bottom: 0;
+  display: none;
+  z-index: 999;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    li {
+      a {
+        i {
+          color: var(--light);
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    .search {
+      width: 350px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    .search {
+      position: fixed;
+      width: 90%;
+      top: -70px;
+      &.block {
+        top: 80px;
+        background: #fff;
+        z-index: 99999;
+      }
+    }
+    .icons {
+      i {
+        &.hide {
+          display: block;
+        }
+      }
+    }
+  }
+  .menu_nav {
+    display: none;
+  }
+  .bottom_nav {
+    display: block;
+  }
+  .bottom_nav {
+    display: block;
+  }
+}
+@media (max-width: 425px) {
+  .nav {
+    .search {
+      input {
+        width: 85%;
+      }
+    }
+  }
+}

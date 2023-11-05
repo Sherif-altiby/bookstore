@@ -1,0 +1,67 @@
+.contact{
+  background-image: url('../../assets/img/letter-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #fff;
+.contact_info{
+  width: 500px;
+  text-align:center;
+  h2{
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  input{
+    width: 100%;
+    outline: none;
+    padding: 10px ;
+    border: 1px solid var(--border_color);
+    border-radius: 5px;
+    margin: 20px 0; 
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+  .btn{
+    background-color: var(--main_color);
+    width: fit-content;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: auto;
+  }
+}
+}
+
+@media (max-width: 768px){
+  .contact{
+    .contact_info{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 425px){
+  .contact{
+    .contact_info{
+    h2{
+      font-size: 20px;
+    }
+    }
+  }
+}
+@media (max-width: 375px){
+  .contact{
+    .contact_info{
+    h2{
+      font-size: 17px;
+    }
+    }
+  }
+}
